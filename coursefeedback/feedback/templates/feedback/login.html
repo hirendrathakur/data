@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Login for Course Feedback</title> 
+{% load staticfiles %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'feedback/navi.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'feedback/forms.css' %}" />
+
+<link rel="stylesheet" type="text/css" href="{% static 'feedback/login.css' %}" />
+</head>
+<body>
+
+<div class="wrapper col0">
+  <div id="topbar">
+   
+   
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+    
+    <img src="{% static "images/IIT_BHU_logo.jpg" %}" width="240px" style="float:left; padding-right:4px;"/>
+      <h1><a href="index.html">IIT(BHU) Course Feedback Even Semester 2014-15</a></h1>
+      <p>Indian Institute of Technology, Banaras Hindu University</p>
+    </div>
+    <div class="fl_right">
+      <ul>
+        <li class="last"><a href="#">Search</a></li>
+        <li><a href="#">About this site</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+      <p>Tel: +915426702070 | Mail: academics@iitbhu.ac.in</p>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+
+<div class="wrapper col4">
+  <div id="container">
+    <div id="content">
+    <div id="login">
+   
+
+    <form method='POST' action="">
+    <h2 align="center" style="color:#fff;"> Student Login for Course Feedback <br> <br></h2>
+        {% csrf_token %}
+        <label for="username">Username</label>
+        <input type="text" name="username" value="" id="username">
+        <label for ="password">Password</label>
+        <input type="password" name="password" value="" id="password">
+
+
+        <input type="submit" value="Login" style="-webkit-box-shadow:rgba(0,0,0,0.0.1) 0 1px 0 0;
+	-moz-box-shadow:rgba(0,0,0,0.0.1) 0 1px 0 0;
+	box-shadow:rgba(0,0,0,0.0.1) 0 1px 0 0;
+	background-color:#5B74A8;
+	border:1px solid #29447E;
+	font-family:'Lucida Grande',Tahoma,Verdana,Arial,sans-serif;
+	font-size:12px;
+	font-weight:700;
+	padding:4px 8px;
+	height:28px;
+	color:#fff;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px" />
+    </form>
+
+{{error}}
+</div>
+    </div>
+    </div>
+    </div>
+
+</body>
+</html>

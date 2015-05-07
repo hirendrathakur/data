@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% for course in student.course_set.all %}
+    <li>
+        {{course.course_id}}
+        {% for instructor in course.instructor_set.all %}
+                    {% if done.done %}
+                <strong>{{instructor.instructor_name}}----> Done</strong> 
+                {% else %}
+                    <ol><a href = "{% url 'feedback:polls' instructor.id student.id%}">{{instructor.instructor_name}}</a></ol>
+                {% endif %}
+        {% endfor %}
+        <br>
+    </li>
+{% endfor %}
+
+</body>
+</html>

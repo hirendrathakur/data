@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+{% extends "feedback/layout.html" %}
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   {% block title %} <title> Course Dashboard</title> {% endblock %}
+</head>
+
+<body>
+{% block body %}
+<div>
+<div class="wrapper col4">
+  <div id="container">
+  <div class="ls">
+<form action ="" method = "post">
+    <h1>{{subject.subject_name}}</h1>
+    <h1>{{professor.prof_name}}</h1><br>
+    <h1>1. Course Organisation</h1><br>Comment 1(On Organisation)
+    {% for result in result_list1 %}
+        <ol>
+            <h4>{{result.question.question_text}}</h4><br>
+            {% csrf_token %}
+            <input type = "radio" name = "{{result.question.question_text}}" value = "excellent" required />Excellent
+            <input type = "radio" name = "{{result.question.question_text}}" value = "verygood" required />Very Good
+            <input type = "radio" name = "{{result.question.question_text}}" value = "good" required />Good
+            <input type = "radio" name = "{{result.question.question_text}}" value = "fair" required />Fair
+            <input type = "radio" name = "{{result.question.question_text}}" value = "poor" required />Poor
+        </ol>
+    {% endfor %}<br>
+    <h1>2. Presentation</h1><br>Comment 2 (On Presentation)
+    {% for result in result_list2 %}
+        <ol>
+            <h4>{{result.question.question_text}}</h4><br>
+            {% csrf_token %}
+            <input type = "radio" name = "{{result.question.question_text}}" value = "excellent" required />Excellent
+            <input type = "radio" name = "{{result.question.question_text}}" value = "verygood" required />Very Good
+            <input type = "radio" name = "{{result.question.question_text}}" value = "good" required />Good
+            <input type = "radio" name = "{{result.question.question_text}}" value = "fair" required />Fair
+            <input type = "radio" name = "{{result.question.question_text}}" value = "poor" required />Poor
+        </ol>
+    {% endfor %}<br>
+    <h1>3. Interaction and Rapport</h1><br>Comment 3 (On Interaction)
+    {% for result in result_list3 %}
+        <ol>
+            <h4>{{result.question.question_text}}</h4><br>
+            {% csrf_token %}
+            <input type = "radio" name = "{{result.question.question_text}}" value = "excellent" required />Excellent
+            <input type = "radio" name = "{{result.question.question_text}}" value = "verygood" required />Very Good
+            <input type = "radio" name = "{{result.question.question_text}}" value = "good" required />Good
+            <input type = "radio" name = "{{result.question.question_text}}" value = "fair" required />Fair
+            <input type = "radio" name = "{{result.question.question_text}}" value = "poor" required />Poor
+        </ol>
+    {% endfor %}<br>
+    <h1>4. Examinations and Grading</h1><br> Comment 4 (On Examinations)
+    {% for result in result_list4 %}
+        <ol>
+            <h4>{{result.question.question_text}}</h4><br>
+            {% csrf_token %}
+            <input type = "radio" name = "{{result.question.question_text}}" value = "excellent" required />Excellent
+            <input type = "radio" name = "{{result.question.question_text}}" value = "verygood" required />Very Good
+            <input type = "radio" name = "{{result.question.question_text}}" value = "good" required />Good
+            <input type = "radio" name = "{{result.question.question_text}}" value = "fair" required />Fair
+            <input type = "radio" name = "{{result.question.question_text}}" value = "poor" required />Poor
+        </ol>
+    {% endfor %}<br>
+    <h1>5. Overall</h1>
+    {% for result in result_list5 %}
+        <ol>
+            <h4>{{result.question.question_text}}</h4><br>
+            {% csrf_token %}
+            <input type = "radio" name = "{{result.question.question_text}}" value = "excellent" required />Excellent
+            <input type = "radio" name = "{{result.question.question_text}}" value = "verygood" required />Very Good
+            <input type = "radio" name = "{{result.question.question_text}}" value = "good" required />Good
+            <input type = "radio" name = "{{result.question.question_text}}" value = "fair" required />Fair
+            <input type = "radio" name = "{{result.question.question_text}}" value = "poor" required />Poor
+        </ol>
+    {% endfor %}<br>
+    <br><h5>Comment on Course Organisation</h5>
+    <input type = "text" name = "comment_1" value = "" style="width: 500px;height: 80px;padding:5px;margin:15px;"/>
+    <br><h5>Comment on Presentation</h5> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = "text" name = "comment_2" value = "" style="width: 500px;height: 80px;padding:5px;margin:15px;font-size:"/>
+    <br><h5>Comment on Interaction and Rapport</h5> &nbsp;&nbsp;&nbsp;
+    <input type = "text" name = "comment_3" value = "" style="width: 500px;height: 80px;padding:5px; margin:15px;"/>
+    <br><h5>Comment on Examinations and Grading</h5>
+    <input type = "text" name = "comment_4" value = "" style="width: 500px;height: 80px;padding:5px;margin:15px;"/>
+
+    <br><br>
+    <input type = "submit" value = "Submit Feedback" style="border : solid 2px #ffffff;
+    border-radius : 3px;
+    moz-border-radius : 3px;
+    font-size : 20px;
+    color : #ffffff;
+    padding : 1px 17px;
+    background-color : #0a66c9;
+    margin-left:250px;" />
+</form>
+
+<br>
+<br>
+
+ Or, <a href = "{% url 'logout' %}">click here </a>to log out <br><br>
+ Return to <a href="{% url 'feedback:index' %}">Course Dashboard</a>
+</div>
+</div>
+</div>
+    </div>
+    </div>
+{% endblock %} 
+</body>
+
+</html>

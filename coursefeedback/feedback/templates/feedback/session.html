@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+{% extends "feedback/layout.html" %}
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+{% block body %}
+<body>
+<div class="wrapper col4">
+  <div id="container">
+<h1>Already Logged in</h1>
+<li><h4><a href = "{% url 'feedback:index' %}">Go for Coursefeedback</a></h4></li>
+<br>
+<li><h4><a href = "{% url 'logout' %}">Logout</a></h4></li>
+</div>
+</div>
+
+</body>
+{% endblock %}
+</html>

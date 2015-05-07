@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends "feedback/layout.html" %}
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+{% block body %}
+<body>
+<div class="wrapper col4">
+  <div id="container">
+<h1>Logout First</h1>
+<a href = "{% url 'logout' %}">click here </a>to log out
+</div>
+    </div>
+</body>
+{% endblock %}
+
+</html>

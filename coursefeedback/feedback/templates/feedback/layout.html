@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'feedback/navi.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'feedback/forms.css' %}" />
+
+<link rel="stylesheet" type="text/css" href="{% static 'feedback/layout.css' %}" />
+{% block title %} <title></title> {% endblock %}
+</head>
+<body>
+<div class="wrapper col0">
+  <div id="topbar">
+   
+   
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+    
+    <img src="{% static "images/IIT_BHU_logo.jpg" %}" width="240px" style="float:left; padding-right:4px;"/>
+      <h1><a href="index.html">STUDENT'S FEEDBACK ON COURSES </a></h1>
+      <p>EVEN SEMESTER 2014-15</p>
+    </div>
+    <div class="fl_right">
+      <ul>
+        <li class="last"><a href="#">Search</a></li>
+        <li><a href="#">About this site</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+      </ul>
+      <p>Tel: +915426702070 | Mail: academics@iitbhu.ac.in</p>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+
+{% block nav %}
+<div class="wrapper col2">
+  <div id="topnav">
+   <ul><li><a href="{% url 'feedback:index' %}">Home </a></li>
+  </ul>
+  
+
+  </div>
+</div>
+
+{% endblock %}{% block body %}  {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Login for Course Feedback</title> 
+{% load staticfiles %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'feedback/navi.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'feedback/forms.css' %}" />
+
+<link rel="stylesheet" type="text/css" href="{% static 'feedback/login.css' %}" />
+</head>
+<body>
+
+<div class="wrapper col0">
+  <div id="topbar">
+   
+   
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+    
+    <img src="{% static "images/IIT_BHU_logo.jpg" %}" width="240px" style="float:left; padding-right:4px;"/>
+      <h1><a href="index.html">IIT(BHU) Course Feedback Even Semester 2014-15</a></h1>
+      <p>Indian Institute of Technology, Banaras Hindu University</p>
+    </div>
+    <div class="fl_right">
+      <ul>
+        <li class="last"><a href="#">Search</a></li>
+        <li><a href="#">About this site</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+      </ul>
+      <p>Tel: +915426702070 | Mail: academics@iitbhu.ac.in</p>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+
+<div class="wrapper col4">
+  <div id="container">
+    <div id="content">
+    <div id="logout">
+   
+
+    <form method='POST' action="">
+
+    <h2 style="color:#fff; font-size:18px"><i>"We all need people who will give us feedback. That's how we improve"</i> - <b>Bill Gates </b><br> <br><center><msg style="color:green; font-size:25px;"> you have succesfully logged out, you can <a href="{% url 'login' %}" style="background:none">Login again </a> </msg> </center></h2>
+       
+        
+
+
+      
+    </form>
+
+{{error}}
+</div>
+    </div>
+    </div>
+    </div>
+
+</body>
+</html>

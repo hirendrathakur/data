@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends "feedback/layout.html" %}
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <title></title>
+</head>
+{% block body %}
+<body>
+<div class="wrapper col4">
+  <div id="container">
+{% csrf_token %}
+
+<h1>Hello! Welcome to IIT(BHU) Course Feedback System for Even Semester 2014-15 Session </h1>
+<li><h3><a href = "{% url 'logout' %}">logout</a></h3>
+</li>
+<br>
+<li><h3>
+<a href = "{% url 'feedback:index' %}">Go for Coursefeedback</a></h3>
+</li>
+</div>
+</div>
+</body>
+{% endblock %}
+</html>
