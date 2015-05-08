@@ -59,7 +59,7 @@ EMAIL_USE_TLS = True
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'hirendrathakur1993@gmail.com'
+EMAIL_HOST_USER = 'hirendra.sthakur.eee12@itbhu.ac.in'
 EMAIL_HOST_PASSWORD = '9424357436'
 DEFAULT_FROM_EMAIL = 'Coursefeedback'    #change this
 DEFAULT_TO_EMAIL = 'to email'
@@ -78,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'coursefeedback_db',
         'USER' : 'root',
-        'PASSWORD' : '1234',
+        'PASSWORD' : '13apr2015',
         'HOST' : '127.0.0.1',
         'PORT': '3306',
 
